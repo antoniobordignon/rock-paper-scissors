@@ -17,7 +17,6 @@ body {
     flex-wrap: wrap;
     margin: 5em auto;
     max-width: 23.1em;
-    border: 1px solid red;
 }
 
 h1 {
@@ -41,6 +40,9 @@ button {
     color: white;
     background: transparent;
     border: transparent;
+    font-size: 25px;
 }
 
-
+i {
+    bakcground-color: white;
+}

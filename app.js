@@ -8,7 +8,6 @@ let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
    userChoice = e.target.id
-   userChoiceDisplay.innerHTML = userChoice
    generateComputerChoice()
    getResult()
 }))
@@ -16,34 +15,34 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1
     if (randomNumber === 1) {
-        computerChoice = 'rock'
+        computerChoice = '<i class="far fa-solid fa-hand-rock"></i>'
     }
     if (randomNumber === 2) {
-        computerChoice = 'paper'
+        computerChoice = '<i class="far fa-solid fa-hand-paper"></i>'
     }
     if (randomNumber === 3) {
-        computerChoice = 'scissors'
+        computerChoice = '<i class="far fa-solid fa-hand-scissors"></i>'
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
 
 function getResult() {
-    if (computerChoice === 'rock' && userChoice === 'paper') {
+    if (computerChoice === '<i class="far fa-solid fa-hand-rock"></i>' && userChoice === 'paper') {
         result = 'you win!'
     }
-    else if (computerChoice === 'rock' && userChoice === 'scissors') {
+    else if (computerChoice === '<i class="far fa-solid fa-hand-rock"></i>' && userChoice === 'scissors') {
         result = 'you lose!'
     }
-    else if (computerChoice === 'paper' && userChoice === 'scissors') {
+    else if (computerChoice === '<i class="far fa-solid fa-hand-paper"></i>' && userChoice === 'scissors') {
         result = 'you win!'
     }
-    else if (computerChoice === 'paper' && userChoice === 'rock') {
+    else if (computerChoice === '<i class="far fa-solid fa-hand-paper"></i>' && userChoice === 'rock') {
         result = 'you lose!'
     }
-    else if (computerChoice === 'scissors' && userChoice === 'rock') {
+    else if (computerChoice === '<i class="far fa-solid fa-hand-scissors"></i>' && userChoice === 'rock') {
         result = 'you win!'
     }
-    else if (computerChoice === 'scissors' && userChoice === 'paper') {
+    else if (computerChoice === '<i class="far fa-solid fa-hand-scissors"></i>' && userChoice === 'paper') {
         result = 'you lose!'
     }
     else {
