@@ -1,4 +1,46 @@
-body {
-    background-color: black;
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(167deg, rgb(2,0,45) 0%, rgb(0,0,150) 100%);
+    color: white;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5em auto;
+    max-width: 23.1em;
+    border: 1px solid red;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: left;
+    padding: 1em
+    
+}
+
+#options {
+    text-align: left;
+    padding: 1em
+}
+
+button {
+    padding: 1em;
+    color: white;
+    background: transparent;
+    border: transparent;
+}
+
+
