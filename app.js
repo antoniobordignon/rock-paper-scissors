@@ -2,15 +2,31 @@ const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
+const icon = document.getElementById('icon')
 let computerChoice
 let computerChoiceIcon
 let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
    userChoice = e.target.id
+   yourChoice()
    generateComputerChoice()
    getResult()
 }))
+
+function yourChoice(){
+    if(userChoice === 'rock'){
+        userChoiceIcon = '<i class="ph-hand-fist"></i>'
+    }
+    if(userChoice === 'paper'){
+        userChoiceIcon = '<i class="ph-hand"></i>'
+    }
+    if(userChoice === 'scissors'){
+        userChoiceIcon = '<i class="ph-scissors"></i>'
+    }
+
+    icon.innerHTML = userChoiceIcon
+}
 
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1
@@ -26,7 +42,6 @@ function generateComputerChoice() {
         computerChoice = 'scissors'
         computerChoiceIcon = '<i class="ph-scissors"></i>'
     }
-
     computerChoiceDisplay.innerHTML = computerChoiceIcon
 }
 
