@@ -2,8 +2,8 @@ const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
-let userChoice
 let computerChoice
+let computerChoiceIcon
 let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -15,39 +15,42 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1
     if (randomNumber === 1) {
-        computerChoice = '<i class="far fa-solid fa-hand-rock"></i>'
+        computerChoice = 'rock'
+        computerChoiceIcon = '<i class="ph-hand-fist"></i>'
     }
     if (randomNumber === 2) {
-        computerChoice = '<i class="far fa-solid fa-hand-paper"></i>'
+        computerChoice = 'paper'
+        computerChoiceIcon = '<i class="ph-hand"></i>'
     }
     if (randomNumber === 3) {
-        computerChoice = '<i class="far fa-solid fa-hand-scissors"></i>'
+        computerChoice = 'scissors'
+        computerChoiceIcon = '<i class="ph-scissors"></i>'
     }
-    computerChoiceDisplay.innerHTML = computerChoice
+
+    computerChoiceDisplay.innerHTML = computerChoiceIcon
 }
 
-function getResult() {
-    if (computerChoice === '<i class="far fa-solid fa-hand-rock"></i>' && userChoice === 'paper') {
+async function getResult() {
+    if (computerChoice === 'rock' && userChoice === 'paper') {
         result = 'you win!'
     }
-    else if (computerChoice === '<i class="far fa-solid fa-hand-rock"></i>' && userChoice === 'scissors') {
+    else if (computerChoice === 'rock' && userChoice === 'scissors') {
         result = 'you lose!'
     }
-    else if (computerChoice === '<i class="far fa-solid fa-hand-paper"></i>' && userChoice === 'scissors') {
+    else if (computerChoice === 'paper' && userChoice === 'scissors') {
         result = 'you win!'
     }
-    else if (computerChoice === '<i class="far fa-solid fa-hand-paper"></i>' && userChoice === 'rock') {
+    else if (computerChoice === 'paper' && userChoice === 'rock') {
         result = 'you lose!'
     }
-    else if (computerChoice === '<i class="far fa-solid fa-hand-scissors"></i>' && userChoice === 'rock') {
+    else if (computerChoice === 'scissors' && userChoice === 'rock') {
         result = 'you win!'
     }
-    else if (computerChoice === '<i class="far fa-solid fa-hand-scissors"></i>' && userChoice === 'paper') {
+    else if (computerChoice === 'scissors' && userChoice === 'paper') {
         result = 'you lose!'
     }
     else {
         result = 'its a draw!'
-    }
-
+    } 
     resultDisplay.innerHTML = result
 }

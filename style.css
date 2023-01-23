@@ -30,19 +30,14 @@ h2 {
     
 }
 
-#options {
-    text-align: left;
-    padding: 1em
-}
-
 button {
-    padding: 1em;
+    padding: .5em;
     color: white;
     background: transparent;
     border: transparent;
     font-size: 25px;
 }
 
-i {
-    bakcground-color: white;
-}
+button i {
+    
+} 
