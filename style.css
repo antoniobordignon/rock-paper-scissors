@@ -2,42 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: rgb(230, 230, 230)
 }
 
 body {
-    background: linear-gradient(167deg, rgb(2,0,45) 0%, rgb(0,0,150) 100%);
+    background: rgb(25,25,25);
     color: white;
     height: 100vh;
 }
 
 #app {
+    background: rgb(9, 190, 139);
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 5em auto;
-    max-width: 23.1em;
-}
-
-h1 {
+    max-width: 30em;
+    border-radius: 15px;
     text-align: center;
 }
 
-
 h2 {
-    text-align: left;
     padding: 1em
-    
 }
+
+#choices {
+    margin: 0 auto
+ }
 
 button {
     padding: .5em;
-    color: white;
     background: transparent;
     border: transparent;
     font-size: 25px;
+    align-items: ;
 }
-
-button i {
-    
-} 

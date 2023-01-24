@@ -45,7 +45,7 @@ function generateComputerChoice() {
     computerChoiceDisplay.innerHTML = computerChoiceIcon
 }
 
-async function getResult() {
+function getResult() {
     if (computerChoice === 'rock' && userChoice === 'paper') {
         result = 'you win!'
     }
